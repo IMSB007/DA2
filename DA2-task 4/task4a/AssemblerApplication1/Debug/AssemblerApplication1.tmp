@@ -1,0 +1,31 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega328"</DEVICE>
+ <WORKING_DIR>C:\Users\Administrator\Desktop\DA2\DA2-task 4\task4a\AssemblerApplication1\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>E:/Atmel Studio 7.0\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc</DIR>
+  <DIR>E:\Atmel Studio 7.0\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Administrator\Desktop\DA2\DA2-task 4\task4a\AssemblerApplication1\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>E:/Atmel Studio 7.0\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m328def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Administrator\Desktop\DA2\DA2-task 4\task4a\AssemblerApplication1\Debug\AssemblerApplication1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>AssemblerApplication1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>AssemblerApplication1.map</FILE>
+  <FILE>AssemblerApplication1.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <Reset><FILE>C:\Users\Administrator\Desktop\DA2\DA2-task 4\task4a\AssemblerApplication1\main.asm</FILE><LINE>10</LINE></Reset>
+  <overflow_handler><FILE>C:\Users\Administrator\Desktop\DA2\DA2-task 4\task4a\AssemblerApplication1\main.asm</FILE><LINE>38</LINE></overflow_handler>
+  <blink><FILE>C:\Users\Administrator\Desktop\DA2\DA2-task 4\task4a\AssemblerApplication1\main.asm</FILE><LINE>24</LINE></blink>
+  <delay><FILE>C:\Users\Administrator\Desktop\DA2\DA2-task 4\task4a\AssemblerApplication1\main.asm</FILE><LINE>31</LINE></delay>
+  <sec_count><FILE>C:\Users\Administrator\Desktop\DA2\DA2-task 4\task4a\AssemblerApplication1\main.asm</FILE><LINE>33</LINE></sec_count>
+ </LABELS>
+</ASSEMBLER_INFO>

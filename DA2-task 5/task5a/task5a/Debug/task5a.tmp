@@ -1,0 +1,34 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.7</VERSION>
+ <DEVICE>"ATmega328"</DEVICE>
+ <WORKING_DIR>C:\Users\oit\Desktop\DA2\DA2-task 5\task5a\task5a\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\oit\Desktop\DA2\DA2-task 5\task5a\task5a\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\m328def.inc</FILE>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.150\avrasm\inc\M328DEF.INC</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\oit\Desktop\DA2\DA2-task 5\task5a\task5a\Debug\task5a.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>task5a.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>task5a.map</FILE>
+  <FILE>task5a.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <INT_0><FILE>C:\Users\oit\Desktop\DA2\DA2-task 5\task5a\task5a\main.asm</FILE><LINE>41</LINE></INT_0>
+  <INIT><FILE>C:\Users\oit\Desktop\DA2\DA2-task 5\task5a\task5a\main.asm</FILE><LINE>13</LINE></INIT>
+  <done><FILE>C:\Users\oit\Desktop\DA2\DA2-task 5\task5a\task5a\main.asm</FILE><LINE>20</LINE></done>
+  <Delay_1sec><FILE>C:\Users\oit\Desktop\DA2\DA2-task 5\task5a\task5a\main.asm</FILE><LINE>23</LINE></Delay_1sec>
+  <Delay1><FILE>C:\Users\oit\Desktop\DA2\DA2-task 5\task5a\task5a\main.asm</FILE><LINE>25</LINE></Delay1>
+  <Delay2><FILE>C:\Users\oit\Desktop\DA2\DA2-task 5\task5a\task5a\main.asm</FILE><LINE>27</LINE></Delay2>
+  <Delay3><FILE>C:\Users\oit\Desktop\DA2\DA2-task 5\task5a\task5a\main.asm</FILE><LINE>29</LINE></Delay3>
+ </LABELS>
+</ASSEMBLER_INFO>

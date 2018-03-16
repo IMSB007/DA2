@@ -1,0 +1,167 @@
+
+GccApplication1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  0000013e  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000000ea  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  0000013e  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000170  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000028  00000000  00000000  000001ac  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   0000075f  00000000  00000000  000001d4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000698  00000000  00000000  00000933  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000298  00000000  00000000  00000fcb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000054  00000000  00000000  00001264  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000003a4  00000000  00000000  000012b8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000112  00000000  00000000  0000165c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000018  00000000  00000000  0000176e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 40 00 	jmp	0x80	; 0x80 <__vector_1>
+   8:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+   c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  10:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  14:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  18:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  1c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  20:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  24:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  28:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  2c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  30:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  34:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  38:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  3c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  40:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  44:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  48:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  4c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  50:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  54:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  58:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  5c:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  60:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+  64:	0c 94 3e 00 	jmp	0x7c	; 0x7c <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+  74:	0e 94 69 00 	call	0xd2	; 0xd2 <main>
+  78:	0c 94 73 00 	jmp	0xe6	; 0xe6 <_exit>
+
+0000007c <__bad_interrupt>:
+  7c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000080 <__vector_1>:
+#include <util/delay.h>
+
+
+//Interrupt Service Routine for INT0
+ISR(INT0_vect)
+{
+  80:	1f 92       	push	r1
+  82:	0f 92       	push	r0
+  84:	0f b6       	in	r0, 0x3f	; 63
+  86:	0f 92       	push	r0
+  88:	11 24       	eor	r1, r1
+  8a:	2f 93       	push	r18
+  8c:	3f 93       	push	r19
+  8e:	8f 93       	push	r24
+  90:	9f 93       	push	r25
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  92:	2f ef       	ldi	r18, 0xFF	; 255
+  94:	34 e3       	ldi	r19, 0x34	; 52
+  96:	8c e0       	ldi	r24, 0x0C	; 12
+  98:	21 50       	subi	r18, 0x01	; 1
+  9a:	30 40       	sbci	r19, 0x00	; 0
+  9c:	80 40       	sbci	r24, 0x00	; 0
+  9e:	e1 f7       	brne	.-8      	; 0x98 <__vector_1+0x18>
+  a0:	00 c0       	rjmp	.+0      	; 0xa2 <__vector_1+0x22>
+  a2:	00 00       	nop
+	unsigned char  temp;
+	
+	_delay_ms(500);
+	temp = PORTB;
+  a4:	85 b1       	in	r24, 0x05	; 5
+	/* This for loop blink LEDs on Dataport 5 times*/
+	PORTB = 0xFF;
+  a6:	9f ef       	ldi	r25, 0xFF	; 255
+  a8:	95 b9       	out	0x05, r25	; 5
+  aa:	9f ef       	ldi	r25, 0xFF	; 255
+  ac:	29 e6       	ldi	r18, 0x69	; 105
+  ae:	38 e1       	ldi	r19, 0x18	; 24
+  b0:	91 50       	subi	r25, 0x01	; 1
+  b2:	20 40       	sbci	r18, 0x00	; 0
+  b4:	30 40       	sbci	r19, 0x00	; 0
+  b6:	e1 f7       	brne	.-8      	; 0xb0 <__vector_1+0x30>
+  b8:	00 c0       	rjmp	.+0      	; 0xba <__vector_1+0x3a>
+  ba:	00 00       	nop
+	_delay_ms(1000);
+	PORTB = 0x00;
+  bc:	15 b8       	out	0x05, r1	; 5
+	PORTB = temp;
+  be:	85 b9       	out	0x05, r24	; 5
+	
+
+}
+  c0:	9f 91       	pop	r25
+  c2:	8f 91       	pop	r24
+  c4:	3f 91       	pop	r19
+  c6:	2f 91       	pop	r18
+  c8:	0f 90       	pop	r0
+  ca:	0f be       	out	0x3f, r0	; 63
+  cc:	0f 90       	pop	r0
+  ce:	1f 90       	pop	r1
+  d0:	18 95       	reti
+
+000000d2 <main>:
+
+int main(void)
+{
+	DDRB |= (1<<PB1); //set PORTB PIN1 as OUTPUT
+  d2:	21 9a       	sbi	0x04, 1	; 4
+	DDRD = 0; //PORTD as INPUT
+  d4:	1a b8       	out	0x0a, r1	; 10
+	
+	EIMSK |= (1<<INT0);					// Enable INT0
+  d6:	e8 9a       	sbi	0x1d, 0	; 29
+	EICRA |= (1<<ISC01) | (1<<ISC00);	// Trigger INT0 on rising edge
+  d8:	e9 e6       	ldi	r30, 0x69	; 105
+  da:	f0 e0       	ldi	r31, 0x00	; 0
+  dc:	80 81       	ld	r24, Z
+  de:	83 60       	ori	r24, 0x03	; 3
+  e0:	80 83       	st	Z, r24
+	
+	sei();				//Enable Global Interrupt
+  e2:	78 94       	sei
+  e4:	ff cf       	rjmp	.-2      	; 0xe4 <main+0x12>
+
+000000e6 <_exit>:
+  e6:	f8 94       	cli
+
+000000e8 <__stop_program>:
+  e8:	ff cf       	rjmp	.-2      	; 0xe8 <__stop_program>
